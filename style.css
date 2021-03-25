@@ -37,6 +37,19 @@ img
     height: 40px;
 }
 
+textarea
+{
+    width: 80px;
+    height: 40px;
+    text-align: center;    
+    line-height: 39.5px;
+    vertical-align: bottom;
+    resize: none;
+    font-weight: bold;
+    font-size: 25px;
+    border: 2px solid black;
+}
+
 .container1
 {
     margin: auto;
@@ -52,14 +65,6 @@ img
 
 .container1 textarea
 {
-    width: 80px;
-    height: 40px;
-    text-align: center;
-    vertical-align: text-top;
-    resize: none;
-    font-weight: bold;
-    font-size: 25px;
-    border: 1px solid black;
     position: absolute;
 }
 
@@ -73,19 +78,6 @@ img
     margin-top: 30px;
     width: 100%;
     text-align: center;
-}
-
-.container2 textarea
-{
-    width: 80px;
-    height: 40px;
-    text-align: center;    
-    line-height: 39.5px;
-    vertical-align: bottom;
-    resize: none;
-    font-weight: bold;
-    font-size: 25px;
-    border: 2px solid black;
 }
 
 #time
