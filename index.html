@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+	    <title>Minesweeper</title>
+	    <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container1">
+			<div>
+				<label>Rows: </label>
+				<textarea readonly rows="1" cols="1" id="displayRows">9</textarea>
+				<input type="range" min="9" max="15" value="9" class="slider" id="rows">
+			</div>
+
+			<div>
+				<label>Columns: </label>
+				<textarea readonly rows="1" cols="1" id="displayCols">9</textarea>
+				<input type="range" min="9" max="45" value="9" class="slider" id="cols">
+			</div>
+
+			<div>
+				<label>Bombs: </label>
+				<textarea readonly rows="1" cols="1" id="displayBombs">10</textarea>
+				<input type="range" min="5" max="80" value="12" class="slider" id="bombs">
+			</div>
+
+			<a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)#Gameplay" target="_blank">
+			How to play</a>
+		</div>
+		<br><br>
+
+		<div class="grid"></div> 
+	    
+	    <div class="container2">
+	    	<img src="Images/clock.png">
+	   		<textarea readonly rows="1" cols="1" id="time">0</textarea>
+	   		<textarea readonly rows="1" cols="1" id="minesLeft">10</textarea>
+	   		<img src="Images/mine.png">
+		</div>
+
+	    <script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

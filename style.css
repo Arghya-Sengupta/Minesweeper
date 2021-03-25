@@ -1,0 +1,118 @@
+body
+{
+    margin: 5px;
+}
+.grid
+{
+    margin: auto;
+    margin-top: 20px;
+    width: 270px;
+    height: 270px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div
+{
+    width: 28px;
+    height: 28px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #03b1fc;
+    border: 1px solid black;
+}
+
+.grid img
+{
+    width: 28px;
+    height: 28px;
+    position: relative;
+}
+
+img
+{
+    width: 40px;
+    height: 40px;
+}
+
+.container1
+{
+    margin: auto;
+    width: 100%;
+}
+
+.container1 div
+{
+    float: left;
+    font-size: 25px;    
+    font-weight: bold;
+}
+
+.container1 textarea
+{
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    vertical-align: text-top;
+    resize: none;
+    font-weight: bold;
+    font-size: 25px;
+    border: 1px solid black;
+    position: absolute;
+}
+
+.slider
+{
+    margin: 15px 50px 0px 90px;
+}
+
+.container2
+{
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.container2 textarea
+{
+    width: 80px;
+    height: 40px;
+    text-align: center;    
+    line-height: 39.5px;
+    vertical-align: bottom;
+    resize: none;
+    font-weight: bold;
+    font-size: 25px;
+    border: 2px solid black;
+}
+
+#time
+{
+    margin-right: 46px;
+}
+
+#minesLeft
+{
+    margin-left: 46px;
+}
+
+a:link, a:visited
+{
+    margin: 2px 0px 0px 125px;
+    float: left;
+    font-size: 25px;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #1ebd68;
+    padding: 5px;
+}
+
+a:hover, a:active
+{
+    background-color: #1ebd68;
+    color: white;
+}
