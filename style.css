@@ -20,8 +20,13 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #03b1fc;
+    background-color: #03b1ec;
     border: 1px solid black;
+}
+
+.grid div:hover
+{
+    background-color: skyblue;
 }
 
 .grid img
