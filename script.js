@@ -105,13 +105,13 @@ function endGame(sqid)
     }
     setTimeout(function()
     {
-        alert("Game Over \nPlease refresh the page to play again.");
+        alert("Game Over !! \nPlease refresh the page to play again.");
     }, 1000+(B*200));
 }
 
 function reveal(sqid)
 {
-    if(isRevealed[sqid] || flagged.includes(sqid) || !(sqid>=0 && sqid<N))
+    if(isRevealed[sqid] || flagged.includes(sqid))
         return ;
 
     isRevealed[sqid] = true;
@@ -138,10 +138,10 @@ function reveal(sqid)
 
 function clicked(sq)
 {
-    if(!isGameOn)
-        return ;
     const sqid = parseInt(sq.target.id);
-    
+    if(!isGameOn || !(sqid>=0 && sqid<N))
+        return ;    
+
     if(firstTime)
     {
         firstTime = false;
