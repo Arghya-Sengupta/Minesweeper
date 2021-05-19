@@ -11,21 +11,28 @@ var bombs = []; //IDs of the divs containing bombs
 var isRevealed = [];
 var flagged = []; //IDs of the divs that are flagged
 
+function disableAll()
+{
+    document.getElementById("rows").disabled = true;
+    document.getElementById("cols").disabled = true;
+    document.getElementById("bombs").disabled = true;
+}
+
 function placeBombs(forbidden)
 {
     for(let i=0;i<B;i++)
     {
-        var id = Math.floor((Math.random()*N));
+        var id = Math.floor(Math.random()*N);
         while(bombs.includes(id) || forbidden.includes(id))
         {
-            id = Math.floor((Math.random()*N));
+            id = Math.floor(Math.random()*N);
         }
         bombs.push(id);
 	    board[id] = -1;
     }
 }
 
-function findNeighbours(sqid) //Returs the 8(or less) neighbouring square's IDs
+function findNeighbours(sqid) //returs the 8(or less) neighbouring square's IDs
 {
     var ans = [];
     var isLeft = (sqid % cols) == 0;
@@ -96,17 +103,19 @@ function endGame(sqid)
     const mine_img = '<img src="Images/mine.png"/>';
     document.getElementById(sqid).innerHTML = mine_img;
     // Reveal all bombs
-    for(let i=0;i<B;i++)
+    var T = 2000/B;
+    var t=1;
+    for(let i=0;i<B;i++,t++)
     {
     	setTimeout(function()
         {
             document.getElementById(bombs[i]).innerHTML = mine_img;
-        }, 200*(i+1));
+        }, T*t);
     }
     setTimeout(function()
     {
         alert("Game Over !! \nPlease refresh the page to play again.");
-    }, 1000+(B*200));
+    }, 1000+(T*t));
 }
 
 function reveal(sqid)
@@ -145,6 +154,7 @@ function clicked(sq)
     if(firstTime)
     {
         firstTime = false;
+        disableAll();
         var forbidden = [];
         var arr = findNeighbours(sqid);
         arr.push(sqid);
